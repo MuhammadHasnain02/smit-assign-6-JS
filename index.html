@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>TODO LIST</h1>
+        <input type="text" placeholder="ENTER ITEM" id="userinp">
+        <br><br>
+        <button onclick="pushArr()" id="btnadd">ADD ITEM</button>
+        <br><br>
+        <ol class="additm">
+        </ol>
+
+    </div>
+    
+<script>
+
+let Arritm = [];
+
+function liadd(){
+    let li = "";
+
+    for(let i=0; i < Arritm.length; i++){
+        li += `<li>
+                ${Arritm[i]}
+                <button  onclick="itmdel(${i})" id="delbtn">Delete</button>
+            </li>`
+    }
+    document.querySelector(".additm").innerHTML = li;
+}
+
+function pushArr(){
+    let getuserinp = document.getElementById("userinp").value;
+
+    Arritm.push(getuserinp)
+    
+    liadd()
+}
+
+function itmdel(id){
+
+    Arritm.splice(id, 1);
+
+    liadd()
+}
+
+</script>
+
+</bod</html>
+
+        <!-- // let Arritm = []
+        
+        //     function liadd(){
+        //         let li = "";
+        
+        //         for(let i = 0; i > Arritm.length; i++){
+        
+        //             li += `<li>
+        //                 ${Arritm[i]}
+        //                 <button onclick="itmdel(${i})" id="btndel">Delete</button>
+        //               </li>`
+        //         }
+        //         document.querySelector(".additm").innerHTML = li;
+        //     }
+        
+        //     function pushArr(){
+        //         let getinpvalue = document.getElementById("userinp").value
+        
+        //         Arritm.push(getinpvalue)
+        
+        //         liadd()
+        //     }
+        
+        //     function itmdel(idx){
+        
+        //         Arritm.splice(idx,1);
+        
+        //         liadd()
+        //     } -->

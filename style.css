@@ -1,0 +1,86 @@
+body{
+    color: black;
+    background-color: white;
+}
+
+.container{
+    background-color: rgb(58, 58, 58);
+    border-radius: 30px;
+    margin-left: 500px;
+    margin-right: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-family: Arial;
+}
+
+#userinp{
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#btnadd{
+    padding: 6px;
+    border-radius: 8px;
+    width: 100px;
+    color: white;
+    background-color: rgb(10, 169, 208);
+}
+#btnadd:hover{
+    cursor: pointer;
+    background-color: rgb(4, 139, 173) ;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+.additm{
+    font-family: Arial;
+    color: white;
+    background-color: rgb(58, 58, 58);
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    padding-left: 40px;
+    text-align: center;
+}
+
+#delbtn{
+    width: 70px;
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(159, 4, 4);
+}
+#delbtn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.additm{
+    color: silver;
+    background-color: black;
+}
+
+/* // Screen Size 1400px check */
+ @media (max-width: 1660px) {
+    .container {
+        margin-left: 460px;
+        margin-right: 460px;
+    }
+ } 
+/* // Screen Size 1200px check */
+ @media (max-width: 1399px) {
+    .container {
+        margin-left: 390px;
+        margin-right: 390px;
+    }
+    #userinp {
+        width: 270px;
+    }
+ } 
